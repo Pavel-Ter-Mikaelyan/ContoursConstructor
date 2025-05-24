@@ -14,7 +14,7 @@ namespace ContoursConstructor
             Points = points;
             if (points.Count < 3)
             {
-                throw new ArgumentException("Кол-во точек в полигоне должно быть больше 2-х.");
+                throw new ArgumentException($"Кол-во точек в полигоне с Id {id} меньше 3-х, а должно быть 3 или более.");
             }
         }
     }
