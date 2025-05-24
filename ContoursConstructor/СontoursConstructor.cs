@@ -10,7 +10,8 @@ namespace ContoursConstructor
     /// Contour.ContourPoints[0], Contour.ContourPoints[1] - первый отрезок контура,
     /// Contour.ContourPoints[1], Contour.ContourPoints[2] - второй отрезок контура,
     /// ...
-    /// Contour.ContourPoints[n], Contour.ContourPoints[0] - последний отрезок
+    /// Contour.ContourPoints[n], Contour.ContourPoints[0] - последний отрезок контура.
+    /// Обход контура начинается с верхней левой точки и далее по часовой стрелке.
     /// </summary>
     public class ContoursConstructor
     {
