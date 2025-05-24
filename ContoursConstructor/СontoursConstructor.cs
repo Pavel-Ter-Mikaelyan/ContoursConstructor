@@ -23,7 +23,7 @@ namespace ContoursConstructor
         //максимально допустимое кол-во контуров
         const int _contoursMaxCount = 20000;
         //допуск на вычисление угла
-        const double _angleEps = 1e-3;
+        const double _angleEps = 1e-5;
         //допуск на double
         const double _doubleEps = 1e-10;
 
