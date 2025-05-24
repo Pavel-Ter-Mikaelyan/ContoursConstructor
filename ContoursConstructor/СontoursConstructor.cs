@@ -46,7 +46,8 @@ namespace ContoursConstructor
                 iteration++;
                 Contour contour = GetContour(outsideContourPoligons);
                 Contours.Add(contour);
-                outsideContourPoligons = GeometryOperations.GetOutsideContourPoligons(contour, outsideContourPoligons);
+                outsideContourPoligons = 
+                    GeometryOperations.GetOutsideContourPoligons(contour, outsideContourPoligons, _doubleEps);
                 if (iteration > _contoursMaxCount)
                 {
                     throw new Exception("Не удалось сформировать контуры по полигонам. " +
@@ -86,7 +87,7 @@ namespace ContoursConstructor
                 }
             }
 
-            return new Contour(contourPoints, _doubleEps);
+            return new Contour(contourPoints);
         }
         static Point GetNextPoint(List<Poligon> poligons, Point currPoint, Point previousPoint, out double angle)
         {
